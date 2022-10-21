@@ -1,0 +1,50 @@
+{
+    "name": "nodeMontgomeryTask0",
+    "split_path": "data/Tuberculosis/montgomery_real.json",
+    "output_dir": "output/TMI/Tuberculosis/LPIPS_buffer/halfBuffBatch",
+
+    "dataset":"Tuberculosis",
+    "model_type": "ResNet18",
+    "pretrained": false,
+    "cl_pretrain_path": "",
+
+    "use_buffer": true,
+    "buffer_type": "gan",
+    "buffer_path": "gan_weights/montgomery_privacy/montgomery_ppGan.pkl",
+    "buffer_size":512,
+    "buffer_batch_size":4,
+
+    "img_size": 256,
+    "num_epochs": 1,
+    "cuda_id": 0,
+    "data_on_CPU": false,
+
+    "train_batch_size": 8,
+    "eval_batch_size": 16,
+    "test_batch_size": 16,
+    "accuracy" : "both", 
+                        
+    "early_stopping": false,
+    "es_patience": 5,
+    "es_delta": 0.01,
+    "stop_on": "loss",
+    "eval_auc": true,
+    "central_node": false,
+    
+    "loss_type": "CrossEntropy",
+    "weighted_loss": false,
+
+    "optimizer": "Adam",
+    "learning_rate": 1e-6,
+    "weight_decay": 2e-7,
+    
+    "lr_finder": false,
+    "lower_lr": 1e-6,
+    "upper_lr":1e-0,
+    
+    "use_scheduler": false,
+    "decay_type": "cosine",
+    "warmup_steps": 500,
+    "cycles_scheduler": 0.5,
+    "num_workers": 0
+}
