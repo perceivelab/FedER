@@ -1,6 +1,10 @@
 <div align="center">
+
 # FedER: Federated Learning through Experience Replay and Privacy-Preserving Data Synthesis
+Matteo Pennisi, Federica Proietto Salanitri, Giovanni Bellitto, Bruno Casella, Marco Aldinucci, Simone Palazzo, Concetto Spampinato
+
 [![Paper](http://img.shields.io/badge/paper-arxiv.2206.10048-B31B1B.svg)](https://arxiv.org/abs/2206.10048)
+
 </div>
 
 # Overview
@@ -14,6 +18,25 @@ Official PyTorch implementation of paper: <b>"FedER: Federated Learning through 
  
  # How to run
  The code expects a json file containing the image paths and their respective labels, formatted as follow:
+ ```python
+{
+ "train": { "pos": [ {"image": #path,  
+                      "label": #class}, 
+                       ...
+                       {"image": #path,  
+                      "label": #class},
+                      ],
+            "neg": [ {"image": #path,  
+                      "label": #class},
+                      ...],
+ "test": [ {"image": #path,  
+            "label": #class}, 
+             ...
+             {"image": #path,  
+            "label": #class},
+            ],
+}
+```
  
  ## Pre-requisites:
 - NVIDIA GPU (Tested on Nvidia GeForce RTX 3090)
@@ -21,8 +44,10 @@ Official PyTorch implementation of paper: <b>"FedER: Federated Learning through 
 
 ## Train Example
 ```bash
+python federated_simulation.py --n_nodes 2 --dataset Tuberculosis --n_rounds 100 --num_epochs 100 --buffer_size 512 --learning_rate 1e-4 --setting non-IID
 
 ```
 
 ## Notes
-The GAN weights can be downloaded from [here]().
+The GAN weights can be downloaded from [here](https://studentiunict-my.sharepoint.com/:u:/g/personal/uni307680_studium_unict_it/ESlmUPw5tn1DsVCHGUxoNk8B21XhxxyW574W45PbYEAW4g?download=1)
+
