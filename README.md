@@ -4,6 +4,7 @@
 Matteo Pennisi, Federica Proietto Salanitri, Giovanni Bellitto, Bruno Casella, Marco Aldinucci, Simone Palazzo, Concetto Spampinato
 
 [![Paper](http://img.shields.io/badge/paper-arxiv.2206.10048-B31B1B.svg)](https://arxiv.org/abs/2206.10048)
+[![Conference](http://img.shields.io/badge/CVIU-2024-4b44ce.svg)](https://www.sciencedirect.com/science/article/pii/S107731422300262X)
 
 </div>
 
